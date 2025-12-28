@@ -4,18 +4,19 @@
 
 I have deep-dived into Unit Economics to identify "Wealth Destroyers."📌 
 
-1. Executive SummaryPrimary Objective: Identify "Profit Leaks" across 10,000+ transactions. Core Insight: Revealed that 18% of potential profit was being consumed by unoptimized shipping routes and high return rates.Target Audience: Founders, CFOs, and Senior Operations Managers.🛠
+## 1. Executive SummaryPrimary Objective:
+Identify "Profit Leaks" across 10,000+ transactions. Core Insight: Revealed that 18% of potential profit was being consumed by unoptimized shipping routes and high return rates.Target Audience: Founders, CFOs, and Senior Operations Managers.🛠
 
-2. The Tech Stack# SQL: Used for ETL (Extract, Transform, Load) and cleaning transaction-level errors.
+## 2. The Tech Stack** SQL: Used for ETL (Extract, Transform, Load) and cleaning transaction-level errors.
 
-# Power BI: Built an Executive Dark Mode dashboard with DAX-driven business logic.
-# Python: Generated a "messy" realistic dataset with hidden costs (Marketing Spend, Shipping Distance).
-# Business Analysis: Focused on Net Profit Margin and Return-on-Ad-Spend (ROAS).⚙️ 
+**Power BI**: Built an Executive Dark Mode dashboard with DAX-driven business logic.
+**Python**: Generated a "messy" realistic dataset with hidden costs (Marketing Spend, Shipping Distance).
+**Business Analysis**: Focused on Net Profit Margin and Return-on-Ad-Spend (ROAS).⚙️ 
 
-3. Data Engineering Layer (SQL)Founders value clean data. I used the following SQL logic to transform raw logs into "Business-Ready" insights:SQL/* TRANSFORMATION HIGHLIGHTS:
-   * Fixed -99 System Glitches
-   * Imputed NULL Marketing Spend
-   * Calculated Transactional Net Profit 
+### Data Engineering Layer (SQL)Founders value clean data. I used the following SQL logic to transform raw logs into "Business-Ready" insights:SQL/* TRANSFORMATION HIGHLIGHTS:
+   * **Fixed -99 System Glitches**
+   * **Imputed NULL Marketing Spend**
+   * **Calculated Transactional Net Profit**
 */
 
 WITH CleanedData AS (
@@ -43,25 +44,25 @@ FROM CleanedData;
 
 💡 4. Strategic Insights & "Aha!" Moments
 
-# The Financial Bridge (Waterfall Chart):
+**The Financial Bridge (Waterfall Chart):**
 
 Discovery: Logistics and Refunds are the biggest "Margin Killers."
 
 Highlight: While Marketing gets the blame, Shipping Costs eat more profit.
 
-# Logistics Efficiency (Scatter Plot):
+**Logistics Efficiency (Scatter Plot):**
 
 Discovery: Furniture shipped over 1,200 KM is non-profitable.
 
 Highlight: Every mile beyond this threshold destroys company value.
 
-# Root Cause (Decomposition Tree):
+**Root Cause (Decomposition Tree):**
 
 Discovery: Bookshelves suffer from a 15% higher return rate.
 
 Highlight: High returns create a "Double Shipping" cost that wipes out profits.🚀 
 
-6. Actionable Recommendations
+**6. Actionable Recommendations**
 
 Dynamic Shipping: Implement a "Distance Surcharge" for orders over 1,200 KM.
 
@@ -70,7 +71,9 @@ Returnless Refunds: For items under $20, stop paying for return shipping; let th
 Budget Pivot: Re-allocate 10% of spend from Furniture to Electronics to maximize ROI.📈 
 
 
-Connect & CollaborateLinkedIn: [Insert Your Profile Link]
+**Connect & Collaborate:**
+
+LinkedIn: [Insert Your Profile Link]
 
 Portfolio: [Insert Link to Power BI Web Report]
 
