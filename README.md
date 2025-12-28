@@ -69,8 +69,8 @@ Budget Pivot: Re-allocate 10% of spend from Furniture to Electronics to maximize
 
 **Connect & Collaborate:**
 
-LinkedIn: [Insert Your Profile Link]
+LinkedIn: [(https://www.linkedin.com/in/mohsinraza-data/)]
 
-Portfolio: [Insert Link to Power BI Web Report]
+Portfolio: [https://mohsin-raza-portfolio.vise.page/]
 
 Status: Seeking Data Analyst / Business Intelligence Roles.
