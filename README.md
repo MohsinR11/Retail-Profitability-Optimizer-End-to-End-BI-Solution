@@ -19,35 +19,10 @@ Identify "Profit Leaks" across 10,000+ transactions. Core Insight: Revealed that
 
 
 #### Data Engineering Layer (SQL)Founders value clean data. I used the following SQL logic to transform raw logs into "Business-Ready" insights:
-### SQL/* TRANSFORMATION HIGHLIGHTS:
+### SQL TRANSFORMATION HIGHLIGHTS:
    * **Fixed -99 System Glitches**
    * **Imputed NULL Marketing Spend**
    * **Calculated Transactional Net Profit**
-*/
-
-
-WITH CleanedData AS (
-    SELECT 
-        Order_ID,
-        Product,
-        Category,
-        -- **Fixing Data Entry Errors**
-        CASE 
-            WHEN Gross_Sales_USD = -99 THEN (Unit_Price_USD * Quantity_Units) 
-            ELSE Gross_Sales_USD 
-        END AS Gross_Sales_USD,
-        COGS_USD,
-        Shipping_Cost_USD,
-        -- **Standardizing Marketing Attribution**
-        COALESCE(Marketing_Spend_USD, 0) AS Marketing_Spend_USD,
-        Refund_Loss_USD
-    FROM raw_retail_data
-)
-SELECT 
-    *,
-    -- **The "Money Maker" Metric**
-    (Gross_Sales_USD - (COGS_USD + Shipping_Cost_USD + Marketing_Spend_USD + Refund_Loss_USD)) AS Net_Profit_USD
-FROM CleanedData;
 
 
 💡 4. Strategic Insights & "Aha!" Moments
