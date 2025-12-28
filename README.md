@@ -73,4 +73,5 @@ LinkedIn: [(https://www.linkedin.com/in/mohsinraza-data/)]
 
 Portfolio: [https://mohsin-raza-portfolio.vise.page/]
 
-Status: Seeking Data Analyst / Business Intelligence Roles.
+
+#### Status: Seeking Data Analyst / Business Intelligence Roles.
