@@ -27,7 +27,7 @@ Target Audience: Founders, CFOs, and Senior Operations Managers.🛠
 **Business Analysis**: Focused on Net Profit Margin and Return-on-Ad-Spend (ROAS).⚙️ 
 
 
-#### Data Engineering Layer (SQL)Founders value clean data. I used the following SQL logic to transform raw logs into "Business-Ready" insights:
+#### 3. Data Engineering Layer (SQL)Founders value clean data. I used the following SQL logic to transform raw logs into "Business-Ready" insights:
 
 ### SQL TRANSFORMATION HIGHLIGHTS:
    * **Fixed -99 System Glitches**
@@ -35,7 +35,7 @@ Target Audience: Founders, CFOs, and Senior Operations Managers.🛠
    * **Calculated Transactional Net Profit**
 
 
-💡 4. Strategic Insights & "Aha!" Moments
+#### 💡 4. Strategic Insights & "Aha!" Moments
 
 **The Financial Bridge (Waterfall Chart):**
 
@@ -58,7 +58,7 @@ Discovery: Bookshelves suffer from a 15% higher return rate.
 Highlight: High returns create a "Double Shipping" cost that wipes out profits.🚀 
 
 
-**6. Actionable Recommendations**
+#### 5. Actionable Recommendations
 
 Dynamic Shipping: Implement a "Distance Surcharge" for orders over 1,200 KM.
 
