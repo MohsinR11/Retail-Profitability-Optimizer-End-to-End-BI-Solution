@@ -1,90 +1,29 @@
-📌 Executive Summary
-This project identifies "Profit Leaks" in a $2M retail business. While many dashboards focus solely on Revenue, this solution deep-dives into Unit Economics to uncover why certain products and shipping routes are destroying the company's bottom line.
-
-📂 Table of Contents
-Business Problem
-
-The Tech Stack
-
-Data Engineering Layer (SQL)
-
-Executive Insights
-
-Strategic Recommendations
-
-🎯 Business Problem
-The Symptom: Record-high Gross Revenue ($2M) but stagnant Net Profit.
-
-The Challenge: High-volume sales are masking "Wealth Destroyers"—transactions that cost more to fulfill than they generate in revenue.
-
-The Goal: Pinpoint "Profit Bleeders" and provide actionable recommendations for a Founder/CFO to increase the Net Profit Margin.
-
-🛠 The Tech Stack
-Python: Simulated a "messy" raw dataset of 10,000+ transactions with hidden variables (Shipping Distance, Return Probabilities).
-
-SQL: Conducted ETL to resolve data-entry errors and pre-calculate transaction-level Net Profit.
-
-Power BI (DAX): Developed a high-impact "Executive Dark Mode" dashboard for strategic decision-making.
-
-⚙️ Data Engineering Layer (SQL)
-Before visualization, I used SQL to ensure data integrity and shift heavy calculations away from the dashboard layer to optimize performance.
-
-SQL
-
-/* Cleaning & Metric Engineering
-   Handling -99 errors and NULL values 
+"Revenue is vanity, but Profit is sanity." 💸This project is designed for Founders and Executive Leadership to uncover why a company generating $2.0M in Gross Revenue is suffering from stagnant growth. I have deep-dived into Unit Economics to identify "Wealth Destroyers."### 📌 1. Executive SummaryPrimary Objective: Identify "Profit Leaks" across 10,000+ transactions.Core Insight: Revealed that 18% of potential profit was being consumed by unoptimized shipping routes and high return rates.Target Audience: Founders, CFOs, and Senior Operations Managers.### 🛠 2. The Tech Stack# SQL: Used for ETL (Extract, Transform, Load) and cleaning transaction-level errors.# Power BI: Built an Executive Dark Mode dashboard with DAX-driven business logic.# Python: Generated a "messy" realistic dataset with hidden costs (Marketing Spend, Shipping Distance).# Business Analysis: Focused on Net Profit Margin and Return-on-Ad-Spend (ROAS).### ⚙️ 3. Data Engineering Layer (SQL)Founders value clean data. I used the following SQL logic to transform raw logs into "Business-Ready" insights:SQL/* TRANSFORMATION HIGHLIGHTS:
+   * Fixed -99 System Glitches
+   * Imputed NULL Marketing Spend
+   * Calculated Transactional Net Profit 
 */
+
 WITH CleanedData AS (
     SELECT 
         Order_ID,
-        Date,
         Product,
         Category,
-        Quantity_Units,
+        -- **Fixing Data Entry Errors**
         CASE 
             WHEN Gross_Sales_USD = -99 THEN (Unit_Price_USD * Quantity_Units) 
             ELSE Gross_Sales_USD 
         END AS Gross_Sales_USD,
         COGS_USD,
         Shipping_Cost_USD,
+        -- **Standardizing Marketing Attribution**
         COALESCE(Marketing_Spend_USD, 0) AS Marketing_Spend_USD,
-        Is_Returned,
         Refund_Loss_USD
     FROM raw_retail_data
 )
 SELECT 
     *,
-    (COGS_USD + Shipping_Cost_USD + Marketing_Spend_USD + Refund_Loss_USD) AS Total_Expenses_USD,
+    -- **The "Money Maker" Metric**
     (Gross_Sales_USD - (COGS_USD + Shipping_Cost_USD + Marketing_Spend_USD + Refund_Loss_USD)) AS Net_Profit_USD
 FROM CleanedData;
-📊 Executive Insights
-1. The Financial Bridge (Waterfall Chart)
-Insight: Revealed that Shipping Costs and Refund Losses consume 18% of Gross Revenue.
-
-Impact: This is the primary driver of margin erosion, proving that "Sales" does not equal "Success."
-
-2. Logistics Break-Even Analysis (Scatter Plot)
-Insight: Discovered a critical threshold: Furniture items shipped over 1,200 KM frequently result in a Net Loss.
-
-Impact: The weight-to-distance ratio makes long-haul furniture shipping unsustainable under the current pricing model.
-
-3. Root Cause Analysis (Decomposition Tree)
-Insight: Identified that Bookshelves have a 15% higher return rate than any other category.
-
-Impact: "Double-shipping" costs (Initial + Return) wipe out the profit margin for 1 out of every 6 units sold in this category.
-
-💡 Strategic Recommendations
-✅ Dynamic Shipping Surcharge: Implement a distance-based "Heavy Freight" fee for Furniture orders exceeding 1,200 KM.
-
-✅ Return Policy Pivot: For low-value items (under $20), switch to a "Returnless Refund" model to save ~$15 in logistics costs per unit.
-
-✅ Marketing Re-allocation: Shift 10% of the marketing budget from high-return/low-margin Furniture to high-margin/low-return Electronics.
-
-🚀 How to Use
-Clone the repo: git clone https://github.com/your-username/profitability-optimizer.git
-
-Generate Data: Run python data_generator.py to create the messy CSV.
-
-View SQL Logic: Check the /sql folder for the transformation script.
-
-Open Dashboard: Launch Profitability_Optimizer.pbix in Power BI Desktop.
+### 📊 4. Key Performance Indicators (KPIs)MetricDefinitionBusiness ImpactGross Revenue$2.0MTotal market footprint.Net Profit$398KActual cash retained after all costs.Profit Margin22.18%The efficiency of current operations.### 💡 5. Strategic Insights & "Aha!" Moments# The Financial Bridge (Waterfall Chart):Discovery: Logistics and Refunds are the biggest "Margin Killers."Highlight: While Marketing gets the blame, Shipping Costs eat more profit.# Logistics Efficiency (Scatter Plot):Discovery: Furniture shipped over 1,200 KM is non-profitable.Highlight: Every mile beyond this threshold destroys company value.# Root Cause (Decomposition Tree):Discovery: Bookshelves suffer from a 15% higher return rate.Highlight: High returns create a "Double Shipping" cost that wipes out profits.### 🚀 6. Actionable Recommendations**Dynamic Shipping: Implement a "Distance Surcharge" for orders over 1,200 KM.**Returnless Refunds: For items under $20, stop paying for return shipping; let the customer keep the item.**Budget Pivot: Re-allocate 10% of spend from Furniture to Electronics to maximize ROI.### 📈 7. Connect & CollaborateLinkedIn: [Insert Your Profile Link]Portfolio: [Insert Link to Power BI Web Report]Status: Seeking Data Analyst / Business Intelligence Roles.
