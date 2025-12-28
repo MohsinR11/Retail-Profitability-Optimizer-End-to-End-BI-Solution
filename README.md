@@ -9,14 +9,21 @@ I have deep-dived into Unit Economics to identify "Wealth Destroyers."📌
 
 ### 1. Executive SummaryPrimary Objective:
 
-Identify "Profit Leaks" across 10,000+ transactions. Core Insight: Revealed that 18% of potential profit was being consumed by unoptimized shipping routes and high return rates.Target Audience: Founders, CFOs, and Senior Operations Managers.🛠
+Identify "Profit Leaks" across 10,000+ transactions. 
+
+Core Insight: Revealed that 18% of potential profit was being consumed by unoptimized shipping routes and high return rates.
+
+Target Audience: Founders, CFOs, and Senior Operations Managers.🛠
 
 
 ### 2. The Tech Stack
 
 **SQL**: Used for ETL (Extract, Transform, Load) and cleaning transaction-level errors.
+
 **Power BI**: Built an Executive Dark Mode dashboard with DAX-driven business logic.
+
 **Python**: Generated a "messy" realistic dataset with hidden costs (Marketing Spend, Shipping Distance).
+
 **Business Analysis**: Focused on Net Profit Margin and Return-on-Ad-Spend (ROAS).⚙️ 
 
 
